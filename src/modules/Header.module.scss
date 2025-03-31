@@ -1,0 +1,174 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background: #fff;
+  color: #000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 70px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1120px) {
+  .header {
+    padding: 30px 40px;
+  }
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: lowercase;
+  cursor: pointer;
+}
+
+.searchBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 10px 15px;
+  width: 250px;
+
+  img {
+    position: absolute;
+    left: 16px;
+    width: 16px;
+    opacity: 0.6;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px 15px 10px 35px;
+    border-radius: 8px;
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+  }
+
+  input::placeholder {
+    color: #989898;
+    font-weight: 500;
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .searchBar {
+    display: none;
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 52px;
+
+  a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #989898;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
+  .active {
+    color: #000;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .nav {
+    display: none;
+  }
+}
+
+.icons {
+  display: flex;
+  gap: 24px;
+
+  img {
+    width: 22px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .icons {
+    display: none;
+  }
+}
+
+.burgerIcon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1120px) {
+  .burgerIcon {
+    display: flex;
+  }
+}
+
+.burgerIcon .burgerBar {
+  width: 25px;
+  height: 2.5px;
+  background-color: #080341;
+}
+
+.mobileNav {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.mobileNav.open {
+  left: 0;
+}
+
+.closeIcon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: black;
+}
+
+.mobileNav a {
+  color: black;
+  font-size: 22px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+@media (min-width: 1121px) {
+  .mobileNav {
+    display: none !important;
+  }
+}
